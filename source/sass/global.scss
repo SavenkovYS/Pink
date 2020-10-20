@@ -1,0 +1,275 @@
+// ШРИФТЫ 
+
+:root {
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.125rem;
+    --fs-nav: 1.125rem;
+    --fs-body: 0.875rem;
+    --fs-btn: 1.125rem;
+}
+
+@media (min-width: $width-tbl) {
+    :root {
+        --fs-h2: 2.5rem;
+    }
+}
+
+@media (min-width: $width-dsk) {
+    :root {
+        --fs-h2: 3.125rem;
+        --fs-h3: 1.875rem;
+        --fs-body: 1.125rem;
+        --fs-btn: 1.3125rem;
+    }
+}
+
+// ГЛОБАЛЬНЫЕ СТИЛИ
+
+body {
+    min-width: $width-mbl;
+    margin: 0 auto;
+    padding: 0;
+  
+    font-family: $ff-primary;
+    font-size: var(--fs-body);
+    line-height: $lh-primary;
+    color: $clr-dark;
+    font-weight: $fw-reg;
+    font-style: normal; 
+  
+    background-color: $clr-light;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+// Кнопки 
+
+.button {
+  display: block;
+
+  padding: 15px 35px;
+  
+  font-family: $ff-primary;
+  font-size: var(--fs-btn);
+  line-height: $lh-secondary;
+  font-weight: $fw-bold;
+  color: $clr-light;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 30px;
+}
+
+// Состояния кнопок 
+
+.button:hover,
+.button:focus {
+  background-color: $clr-bg-hvr;
+}
+
+.button:focus {
+  outline: 5px solid $clr-accent-dark;
+  outline-offset: 5px;
+}
+
+.button:active {
+  background-color: $clr-bg-act;
+
+  color: $clr-light-act;
+}
+
+.button:disabled {
+  background-color: $clr-bg-disabled;
+}
+
+// =========Поля формы==========
+
+// Текстовые поля
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  border: none;
+  padding: 14px 22px;
+
+  font-size: 1.125rem;
+  color: black;
+
+  background-color: #f2f2f2;
+  border: 4px solid transparent;
+}
+
+// Состояния текстовых полей
+
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="email"]:hover {
+  background-color: #e5e5e5;
+  border: 4px solid #e5e5e5;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="text"]:active,
+input[type="tel"]:active,
+input[type="email"]:active {
+  background-color: #ffffff;
+  border: 4px solid #e5e5e5;
+  outline: none;
+}
+
+// Чекбоксы
+
+input[type="checkbox"] + label::before {
+  content: '';
+
+  width: 56px;
+  height: 56px;
+
+  background-color: #f2f2f2;
+  border-radius: 5px
+} 
+
+input[type="checkbox"]:checked + label::after {
+  content: '';
+
+  width: 21px;
+  height: 13px;
+
+  border-left: 3px solid #333333;
+  border-bottom: 3px solid #333333;
+  transform: rotate(-45deg);
+}
+
+// Состояния чекбоксов
+
+input[type="checkbox"]:hover + label::before,
+input[type="checkbox"]:focus + label::before {
+  background-color: #e5e5e5;
+}
+
+input[type="checkbox"]:active + label::before {
+  background-color: #d5d5d5;
+}
+
+input[type="checkbox"]:active:checked + label::after {
+  border-color: rgba(51, 51, 51, 0.3);
+}
+
+// Радиокнопки
+
+input[type="radio"] + label::before {
+  content: "";
+
+  width: 56px;
+  height: 56px;
+
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label::after {
+  content: "";
+
+  width: 22px;
+  height: 22px;
+
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+// Состояния радиокнопок
+
+input[type="radio"]:hover + label::before,
+input[type="radio"]:focus + label::before {
+  background-color: #e5e5e5;
+}
+
+input[type="radio"]:active + label::before {
+  background-color: #d5d5d5;
+}
+
+input[type="radio"]:active:checked + label::after {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+// Placeholders
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-family: $ff-primary;
+  color: $clr-dark;
+  font-weight: $fw-bold;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder { 
+  font-family: $ff-primary;
+  color: $clr-dark;
+  font-weight: $fw-bold;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {  
+  font-family: $ff-primary;
+  color: $clr-dark;
+  font-weight: $fw-bold;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {  
+  font-family: $ff-primary;
+  color: $clr-dark;
+  font-weight: $fw-bold;
+}
+
+// Сброс настроек по умолчанию
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+  
+p,
+h1, 
+h2,
+h3, 
+h4,
+h5,
+h6,
+figure {
+  margin: 0;
+}
+
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}

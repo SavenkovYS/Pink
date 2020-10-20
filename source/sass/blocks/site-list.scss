@@ -1,0 +1,39 @@
+.site-list {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        border-top: 1px solid $br-clr-secondary;
+        border-bottom: 1px solid $clr-dark;
+    }
+
+    &__link {
+        display: block;
+
+        padding: 20px;
+
+        color: $clr-light;
+        text-align: center;
+        text-transform: uppercase;
+
+        text-decoration: none;
+    }
+}
+
+@media(min-width: $width-dsk) {
+    .site-list {
+        flex-direction: row;
+        justify-content: space-between;
+
+        &__item {
+            border-top: none;
+            border-bottom: none;
+        }
+    
+        &__link {
+            padding: 0;
+
+            text-transform: none;
+        }
+    }
+}

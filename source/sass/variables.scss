@@ -1,0 +1,36 @@
+// Font
+$ff-primary             :"Open Sans", "Arial", sans-serif;
+
+//Font-weight 
+
+$fw-light                :300;
+$fw-reg                  :400;
+$fw-bold                 :900;
+
+//Line-height
+
+$lh-primary              :1.7;
+$lh-secondary            :1.2;
+
+// Media Thresholds
+$width-dsk              : 1200px; 
+$width-tbl              : 660px;
+$width-mbl              : 320px;
+
+// Main Colors 
+$clr-accent-dark        :#283645;
+$clr-accent-light       :#d22856;
+$clr-light              :#fff;
+$clr-dark               :#000;
+
+// Hover/Active/Disabled Colors 
+
+$clr-bg-hvr             :rgba(102, 158, 192, 1);
+$clr-bg-act             :rgba(84, 150, 189, 1);
+$clr-bg-disabled        :rgba(229, 229, 229, 1);
+$clr-light-act          :rgba(255, 255, 255, 0.3);
+$clr-dark-act           :rgba(0, 0, 0, 0.3);
+
+//Border Colors 
+$br-clr-primary         :rgba(229, 229, 229, 1);
+$br-clr-secondary       :rgba(255, 255, 255, 0.15);

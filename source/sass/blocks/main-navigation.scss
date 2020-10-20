@@ -1,0 +1,169 @@
+.main-navigation {
+    position: relative;
+
+    color: $clr-light;
+
+    background-color: $clr-accent-dark;
+
+    &__top {
+        padding: 25px 20px 20px;
+        border-bottom: 1px solid $clr-dark;
+    }
+
+    &__logo-image--tablet {
+        display: none;
+    }
+
+    &__logo-image--desktop {
+        display: none;
+    }
+
+    &__button {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+
+        background-color: transparent;
+        border: none;
+    }
+
+    &__button--close {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__button--close::after,
+    &__button--close::before {
+        content: '';
+
+        position: absolute;
+        top: 10px;
+        left: -2px;
+
+        width: 30px;
+        height: 4px;
+        
+        background-color: #fff;
+    }
+
+    &__button--close::after {
+        transform: rotate(45deg);
+    }
+
+    &__button--close::before {
+        transform: rotate(-45deg);
+    }
+
+    &__button--open {
+        width: 50px;
+        height: 30px;
+    }
+
+    &__button--open::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 50px;
+        height: 4px;
+
+        background-color: #fff;
+        box-shadow: 0 10px #fff,
+                    0 20px #fff;
+    }
+
+    &__button--open {
+        display: none;
+    }
+}
+
+@media(min-width: $width-tbl) {
+    .main-navigation {
+
+        &__top {
+            padding: 25px 20px 40px;
+            border-bottom: 1px solid $clr-dark;
+        }
+
+        &__logo-image--mobile {
+            display: none;
+        }
+
+        &__logo-image--tablet {
+            display: block;
+        }   
+
+        &__button {
+            top: 42px;
+        }
+    }
+}
+
+// Закрытие/Открытие главного меню
+
+@media(max-width: $width-dsk) {
+    .main-navigation {
+
+        &--closed {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        &--closed &__top {
+            border-bottom: none;
+        }
+
+        &--closed &__list {
+            display: none;
+        }
+
+        &--closed &__button--close {
+            display: none;
+        }
+
+        &--closed &__button--open {
+            display: block;
+        }
+    }
+}
+
+@media(min-width: $width-dsk) {
+    .main-navigation {
+        display: flex;
+        justify-content: space-between;
+
+        padding: 25px 130px 40px;
+
+        background-color: rgba(0, 0, 0, 0.3);
+
+        &__top {
+            padding: 0;
+            border-bottom: none;
+        }
+
+        &__logo-image--tablet {
+            display: none;
+        }
+
+        &__logo-image--desktop {
+            display: block;
+        }   
+
+        &__list {
+            width: 70%;
+            max-width: 800px;
+            padding-top: 10px;
+        }
+
+        &__button {
+            display: none;
+        }
+    }
+}

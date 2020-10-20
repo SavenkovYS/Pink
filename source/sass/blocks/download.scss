@@ -1,0 +1,152 @@
+.download {
+    min-height: 462px;
+    padding-top: 462px;
+
+    color: $clr-light;
+
+    background-color: $clr-accent-dark;
+    background-image: url(../img/hand-mobile.png),
+                      url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-position: top 150px left 20%, top center;
+    background-size: auto 316px, auto;
+    
+
+    &__content {
+        padding: 30px 20px;
+
+        text-align: center;
+    }
+
+    &__slogan {
+        display: none;
+    }
+
+    &__button,
+    &__text {
+        width: 80%;
+        min-width: 280px;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    &__button {     
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        max-width: 280px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        display: inline-block;
+
+        width: 50px;
+        height: 60px;
+
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &__link--ios {
+       background-image: url('../img/apple-logo.svg');    
+    }
+
+    &__link--android {
+        background-image: url('../img/android-logo.svg');    
+    }
+
+    &__link--windows {
+        background-image: url('../img/microsoft-logo.svg');    
+    }
+}
+
+@media(min-width: $width-tbl) {
+    .download {
+        display: flex;
+        flex-direction: column;
+
+        min-height: 729px;
+        padding-top: 210px;
+        padding-bottom: 110px;
+
+        background-image: url(../img/hand-tablet.png),
+                          url(../img/bg-back-tablet@1x.jpg);
+        background-position: bottom center, top center;
+        background-size:  auto, auto 100%;
+        
+
+        &__content {
+            padding: 0 20px;
+            margin-right: auto;
+        }
+
+        &__slogan {
+            display: block;
+
+            width: 240px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+
+            font-size: var(--fs-h2);
+            line-height: $lh-secondary;
+        }
+
+        &__button,
+        &__text {
+            width: 100%;
+            min-width: auto;
+            max-width: auto;
+        }
+
+        &__button {     
+            margin-bottom: 45px;
+        }
+
+        &__list {
+            max-width: 320px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+}
+
+@media(min-width: $width-dsk) {
+    .download {
+        min-height: 853px;
+        padding-top: 220px;
+        padding-bottom: 120px;
+
+        background-image: url(../img/hand-desktop.png),
+                          url(../img/bg-back-desktop@1x.jpg);
+        background-position: bottom center, top center;
+        background-size:  auto, auto 100%;
+        
+
+        &__content {
+            padding: 0 130px;
+        }
+
+        &__slogan {
+            width: 270px;
+            margin-bottom: 50px;
+        }
+
+        &__button {     
+            margin-bottom: 65px;
+        }
+
+        &__list {
+            max-width: 240px;
+            margin-bottom: 40px;
+        }
+    }
+}
