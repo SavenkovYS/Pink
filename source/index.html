@@ -122,29 +122,37 @@
             <h2 class="visually-hidden">Преимущества</h2>
             <b class="advantages__slogan advantages__slogan--question">Устали от серости мегаполиса?</b>
             <b class="advantages__slogan advantages__slogan--answer">Нам есть, что вам предложить!</b>
-            <ul class="advantages__list">
-            <li class="advantages__item advantages__item--first">
-                <h3 class="advantages__title">Поднимает настроение</h3>
-                <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            </li>
-            <li class="advantages__item advantages__item--second">
-                <h3 class="advantages__title">Меняет мир вокруг</h3>
-                <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="advantages__item advantages__item--third">
-                <h3 class="advantages__title">Заводит новых друзей</h3>
-                <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-            </ul>
+            <div class="advantages__container">
+                <div class="advantages__inner-container">
+                    <ul class="advantages__list">
+                        <li class="advantages__item advantages__item--first">
+                            <h3 class="advantages__title">Поднимает настроение</h3>
+                            <p class="advantages__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                        </li>
+                        <li class="advantages__item advantages__item--second">
+                            <h3 class="advantages__title">Меняет мир вокруг</h3>
+                            <p class="advantages__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                        </li>
+                        <li class="advantages__item advantages__item--third">
+                            <h3 class="advantages__title">Заводит новых друзей</h3>
+                            <p class="advantages__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Секция с научным исследованием -->
 
         <section class="research">
-            <h2 class="research__title">Эффект на 24 часа!</h2>
-            <p class="research__text">Британские ученые провели исследования и доказали,
-            что положительный эффект от использования приложения длится целые сутки!</p>
-            <a href="#" class="research__link">Узнать больше об исследовании</a>
+            <div class="research__container">
+                <div class="research__content">
+                    <h2 class="research__title">Эффект на 24 часа!</h2>
+                    <p class="research__text">Британские ученые провели исследования и доказали,
+                    что положительный эффект от использования приложения длится целые сутки!</p>
+                    <a href="#" class="research__link">Узнать больше об исследовании</a>
+                </div>
+            </div>
         </section>
 
         <!-- Комментарии -->
@@ -152,91 +160,97 @@
             <h2 class="visually-hidden">Комментарии</h2>
             <ul class="comments__list">
                 <li class="comments__item slider__item">
-                    <div class="comments__author-wrapper">
-                    <p class="comments__author-name">Николай Петров</p>
-                    <p class="comments__author-description">25 лет, водитель трамвая</p>
+                    <div class="comments__auther">
+                        <p class="comments__author-name">Николай Петров</p>
+                        <p class="comments__author-description">25 лет, водитель трамвая</p>
                     </div>
-                    <p class="comments__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
-                    А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+                        <p class="comments__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи!
+                                                  А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
                 </li>
             </ul>
             <p class="comments__toggles slider__toggles">
-                <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">1</span></button>
-                <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
-                <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
+                <button class="slider__toggle slider__toggle--active" type="button" aria-label="Первый комментарий"></button>
+                <button class="slider__toggle" type="button" aria-label="Второй комментарий"></button>
+                <button class="slider__toggle" type="button" aria-label="Третий комментарий"></button>
             </p>
-            <p class="comments__toggles-desktop slider__toggles-desktop">
-                <button class="slider__toggle-desktop slider__toggle-desktop--forward" type="button"><span class="visually-hidden">Следующий комментарий</span></button>
-                <button class="slider__toggle-desktop slider__toggle-desktop--backward" type="button"><span class="visually-hidden">Предыдущий комментарий</span></button>
+            <p class="comments__toggles-arrow slider__toggles-arrow">
+                <button class="slider__toggle-arrow slider__toggle-arrow--backward comments__toggle-arrow comments__toggle-arrow--backward" 
+                        type="button" 
+                        aria-label="Предыдущий комментарий">
+                </button>
+                <button class="slider__toggle-arrow slider__toggle-arrow--forward comments__toggle-arrow comments__toggle-arrow--forward" 
+                        type="button"  
+                        aria-label="Следующий комментарий">
+                </button>
             </p>
         </section>
 
         <!-- Выбор тарифа -->
 
-        <section class="catalog slider">
-            <table class="catalog__list">
+        <section class="catalogue slider">
+            <table class="catalogue__list">
                 <tr>
-                    <td class="catalog__field catalog__field--empty"></td>
-                    <td class="catalog__field">
-                        <h3 class="catalog__title">База</h3>
-                        <p class="catalog__price">1,99 USD</p>
+                    <td class="catalogue__field catalogue__field--empty"></td>
+                    <td class="catalogue__field">
+                        <h3 class="catalogue__title">База</h3>
+                        <p class="catalogue__price">1,99 USD</p>
                     </td>
-                    <td class="catalog__field catalog__field--hit">
-                        <h3 class="catalog__title">Стандарт</h3>
-                        <p class="catalog__price">3,99 USD</p>
+                    <td class="catalogue__field catalogue__field--hit">
+                        <h3 class="catalogue__title">Стандарт</h3>
+                        <p class="catalogue__price">3,99 USD</p>
                     </td>
-                    <td class="catalog__field">
-                        <h3 class="catalog__title">Анлим</h3>
-                        <p class="catalog__price">9,99 USD</p>
+                    <td class="catalogue__field">
+                        <h3 class="catalogue__title">Анлим</h3>
+                        <p class="catalogue__price">9,99 USD</p>
                     </td>
                 </tr>
                 <tr>
-                    <td class="catalog__value">Розовый фильтр</td>
-                    <td class="catalog__value catalog__value--yes">
-                        <span>Розовый фильтр</span>
+                    <td class="catalogue__value catalogue__value--title">Розовый фильтр</td>
+                    <td class="catalogue__value catalogue__value--yes">
+                        <span class="catalogue__value-description">Розовый фильтр</span>
                         <span class="visually-hidden">есть</span>
                     </td>
-                    <td class="catalog__value catalog__value--yes">
-                        <span>Розовый фильтр</span>
+                    <td class="catalogue__value catalogue__value--yes">
+                        <span class="catalogue__value-description">Розовый фильтр</span>
                         <span class="visually-hidden">есть</span>
                     </td>
-                    <td class="catalog__value catalog__value--yes">
-                        <span>Розовый фильтр</span>
-                        <span class="visually-hidden">есть</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="catalog__value">Смайлики</td>
-                    <td class="catalog__value catalog__value--no">
-                        <span>Смайлики</span>
-                        <span class="visually-hidden">нет</span>
-                    </td>
-                    <td class="catalog__value catalog__value--yes">
-                        <span>Смайлики</span>
-                        <span class="visually-hidden">есть</span>
-                    </td>
-                    <td class="catalog__value catalog__value--yes">
-                        <span>Смайлики</span>
+                    <td class="catalogue__value catalogue__value--yes">
+                        <span class="catalogue__value-description">Розовый фильтр</span>
                         <span class="visually-hidden">есть</span>
                     </td>
                 </tr>
                 <tr>
-                    <td class="catalog__value">Комментарии</td>
-                    <td class="catalog__value catalog__value--no">
-                        <span>Комментарии</span>
+                    <td class="catalogue__value catalogue__value--title">Смайлики</td>
+                    <td class="catalogue__value catalogue__value--no">
+                        <span class="catalogue__value-description">Смайлики</span>
                         <span class="visually-hidden">нет</span>
                     </td>
-                    <td class="catalog__value catalog__value--no">
-                        <span>Комментарии</span>
+                    <td class="catalogue__value catalogue__value--yes">
+                        <span class="catalogue__value-description">Смайлики</span>
+                        <span class="visually-hidden">есть</span>
+                    </td>
+                    <td class="catalogue__value catalogue__value--yes">
+                        <span class="catalogue__value-description">Смайлики</span>
+                        <span class="visually-hidden">есть</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="catalogue__value catalogue__value--title">Комментарии</td>
+                    <td class="catalogue__value catalogue__value--no">
+                        <span class="catalogue__value-description">Комментарии</span>
                         <span class="visually-hidden">нет</span>
                     </td>
-                    <td class="catalog__value catalog__value--yes">
-                        <span>Комментарии</span>
+                    <td class="catalogue__value catalogue__value--no">
+                        <span class="catalogue__value-description">Комментарии</span>
+                        <span class="visually-hidden">нет</span>
+                    </td>
+                    <td class="catalogue__value catalogue__value--yes">
+                        <span class="catalogue__value-description">Комментарии</span>
                         <span class="visually-hidden">есть</span>
                     </td>
                 </tr>
             </table>
-            <p class="catalog__toggles slider__toggles">
+            <p class="catalogue__toggles slider__toggles">
                 <button class="slider__toggle" type="button" aria-label="База"></button>
                 <button class="slider__toggle slider__toggle--active" type="button" aria-label="Стандарт"></button>
                 <button class="slider__toggle" type="button" aria-label="Анлим"></button>
@@ -247,16 +261,19 @@
 
         <section class="contacts">
             <h2 class="visually-hidden">Контакты</h2>
-            <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
+            <p class="contacts__title">Остались вопросы?<span>Свяжитесь с нами!</span></p>
             <ul class="contacts__list">
-                <li class="contacts__item contacts__item--phone">Звоните:
+                <li class="contacts__item contacts__item--phone">
+                    <p class="contacts__item-label">Звоните:</p>
                     <p class="contacts__item-value contacts__item-value--phone">+7 (812) 555-66-66</p>
                 </li>
-                <li class="contacts__item contacts__item--mail">Пишите:
+                <li class="contacts__item contacts__item--mail">
+                    <p class="contacts__item-label">Пишите:</p>
                     <a href="#" class="contacts__item-value contacts__item-value--mail">mail@htmlacademy.ru</a>
                 </li>
-                <li class="contacts__item contacts__item--address">Приезжайте в гости:
-                    <p class="contacts__item-value contacts__item-value--address">ул. Большая Конюшенная, 19/8</p>
+                <li class="contacts__item contacts__item--address">
+                    <p class="contacts__item-label">Приезжайте в гости:</p>
+                    <p class="contacts__item-value contacts__item-value--address">ул. Большая <span>Конюшенная, 19/8</span></p>
                 </li>
             </ul>
             <p class="contacts__map">

@@ -1,0 +1,74 @@
+.research {
+    display: none;
+}
+
+@media(min-width: $width-tbl) {
+    .research {
+        display: block;
+
+        &__container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 20px 100px; 
+
+            background-image: url(../img/research-tablet.png);
+            background-repeat: no-repeat;
+            background-position: top 60px left 5%;
+        }
+
+        &__content {
+            width: 50%;
+            max-width: 320px;
+            margin-left: auto;
+            padding: 35px 0;  
+        }
+
+        &__title {
+            width: 170px;
+            margin-bottom: 15px;
+
+            font-size: 30px;
+            font-weight: $fw-bold;
+            line-height: $lh-secondary;
+            color: $clr-dark;
+        }
+
+        &__text {
+            margin-bottom: 10px;
+        }
+
+        &__link {
+            color: $clr-accent-light;
+        }
+    }
+}
+
+@media(min-width: $width-dsk) {
+    .research {
+        background-color: #f2f2f2;
+    
+        &__container {
+            max-width: 1300px;
+            padding: 0 130px 65px; 
+
+            background-image: url(../img/research-desktop.png);
+            background-position: top left 130px;
+        }
+
+        &__content {
+            width: 570px;
+            max-width: none;
+    
+            padding: 90px 0 45px;  
+        }
+
+        &__title {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            margin-bottom: 35px;
+        }
+    }
+}

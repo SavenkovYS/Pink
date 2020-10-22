@@ -1,0 +1,235 @@
+.catalogue {
+    padding: 90px 0 50px;
+
+    background-image: url(../img/bg-triangle-white.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: top;    
+        background-color: #f2f2f2;
+
+        overflow: hidden;
+
+    &__list {
+        width: 280%;
+        transform: translateX(-32%);
+        margin-bottom: 40px;
+
+        text-transform: uppercase;
+
+        border-collapse: collapse;
+    }
+
+    td:first-child {
+        display: none;
+    }
+
+    &__field {
+        width: calc(100 / 3);
+        padding: 10px 20px 15px;
+
+        color: $clr-light;
+        text-align: center;
+
+        background-color: $clr-accent-dark;
+        border-left: 2px solid $br-clr-primary;
+        border-right: 2px solid $br-clr-primary;
+    }
+
+    &__field--hit {
+        position: relative;
+    }
+
+    &__field--hit::before {
+        content: '';
+        position: absolute;
+        top: -29px;
+        left: -42px;
+
+        width: 100px;
+        height: 75px;
+
+        border: 30px solid $clr-accent-light;
+        border-top: 30px solid transparent;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        
+        transform: rotate(-45deg);
+    }
+
+    &__field--hit::after {
+        content: 'хит';
+        position: absolute;
+        top: 13px;
+        left: 8px;
+
+        font-size: 0.875rem;
+
+        transform: rotate(-45deg);
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        font-weight: $fw-bold;
+    }
+
+    &__price {
+        font-size: 1.5rem;
+        font-weight: $fw-light;
+        line-height: $lh-secondary;
+    }
+
+    &__value {
+        position: relative;
+
+        padding: 20px;
+        
+        line-height: $lh-secondary;
+
+        border: 2px solid $br-clr-primary;
+        border-top: none;
+    }
+
+    &__value--yes::before,
+    &__value--no::before,
+    &__value--no:after {
+        content: '';
+        position: absolute;
+    }
+    
+    &__value--yes::before {
+        top: 18px;
+        right: 20px;
+
+        width: 30px;
+        height: 15px;
+        transform: rotate(-45deg);
+
+        border: 3px solid #3dc644;
+        border-right: none;
+        border-top: none;
+    }
+
+    &__value--no::before,
+    &__value--no::after {
+        top: 26px;
+        right: 15px;
+
+        width: 35px;
+        height: 3px;
+
+        background-color: #f25b26;
+    }
+
+    &__value--no::before {
+        transform: rotate(45deg);
+    }
+
+    &__value--no::after {
+        transform: rotate(-45deg);
+    }
+}
+
+@media(min-width: $width-tbl) {
+    .catalogue {
+        padding: 90px 20px 65px; 
+
+        &__list {
+            width: 100%;
+            margin-bottom: 0;
+            transform: unset;
+        }
+
+        td:first-child {
+            display: table-cell;
+        }
+
+        &__field{
+            width: 24%;
+            padding: 10px 15px;
+        }
+
+        &__field--hit::before {
+            top: -21px;
+            left: -35px;
+    
+            width: 85px;
+            height: 60px;
+        }
+    
+        &__field--hit::after {
+            top: 9px;
+            left: 4px;
+        }
+
+        &__field--empty {
+            border-top: none;
+            border-left: none;
+            border-bottom: 2px solid $br-clr-primary;
+            background-color: transparent;
+        }
+
+        &__title {
+            font-size: 1rem;
+        }
+    
+        &__price {
+            font-size: 1.125rem;
+        }
+
+        &__value {
+            padding: 15px;
+        }
+
+        &__value--title {
+            width: 28%;
+
+            text-transform: none;
+        }
+
+        &__value-description {
+            display: none;
+        }
+        
+        &__value--yes::before {
+            top: calc(50% - 12px);
+            right: calc(50% - 20px);
+        }
+    
+        &__value--no::before,
+        &__value--no::after {
+            top: calc(50% - 2px);
+            right: calc(50% - 24px);
+        }
+
+        &__toggles {
+            display: none;
+        }    
+    }
+}
+
+@media(min-width: $width-dsk) {
+    .catalogue {
+        padding: 150px 130px 100px;
+
+        &__title {
+            font-size: 1.125rem;
+        }
+    
+        &__price {
+            font-size: 1.5rem;
+        }
+
+        &__field--hit::before {
+            top: -29px;
+            left: -42px;
+    
+            width: 100px;
+            height: 75px;
+        }
+    
+        &__field--hit::after {
+            top: 13px;
+            left: 8px;
+        }
+    }
+}

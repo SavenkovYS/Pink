@@ -1,0 +1,9 @@
+.page-footer {
+    display: none;
+}
+
+@media(min-width: $width-tbl) {
+    .page-footer {
+        display: block;
+    }
+}
