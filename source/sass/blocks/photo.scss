@@ -1,0 +1,157 @@
+.photo {
+    padding: 0 20px;
+
+    &--main {
+        position: relative;
+
+        padding: 0;
+    }
+
+    &--main::before {
+        content: 'Панорама дня';
+
+        position: absolute;
+        top: 0;
+        right: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 36px;
+
+        font-size: 0.750rem;
+        font-weight: $fw-bold;
+        color: $clr-light;
+        text-transform: uppercase;
+
+        background-color: $clr-accent-light;
+    }
+
+    &--main &__comment {
+        margin: 0 20px;
+    }
+
+    &__image {
+        width: 100%;
+    }  
+
+    &__comment {
+        padding: 20px 30px 25px 20px;
+
+        background-color: #f2f2f2;
+    }
+
+    &__author {
+        margin-bottom: 5px;
+    }
+
+    &__author-name {
+        font-size: 0.875rem;
+        font-weight: $fw-bold;
+    }
+
+    &__time {
+        font-size: 0.750rem;
+        text-transform: uppercase;
+        font-weight: $fw-light;
+    }
+
+    &__text {
+        margin-bottom: 10px;
+
+        font-size: 0.875rem;
+    }   
+
+    &__likes {
+        display: flex;
+        align-items: center;
+    }
+
+    &__likes-button {
+        margin-right: 20px;
+        padding: 0;
+
+        border: none;
+        background-color: transparent;
+    }
+
+    &__likes-count {
+        font-size: 0.875rem;
+        color: $clr-accent-light;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
+
+@media(min-width: $width-tbl) {
+    .photo {
+        padding: 0;
+    
+        &--main::before {
+            top: 60px;
+        }
+    
+        &__comment {
+            display: flex;
+            flex-direction: column;
+
+            padding: 25px;
+        }
+
+        // Структура комментария главной фотографии
+    
+        &--main &__comment {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &--main &__author {
+            order: 1;
+        }
+
+        &--main &__likes {
+            order: 2;
+        }
+
+        &--main &__text {
+            order: 3;
+            width: 100%;
+        }
+
+        &--main &__likes-count {
+            margin-right: 20px;
+        }
+
+        // / Структура комментария главной фотографии
+    
+        &__likes {
+            justify-content: space-between;
+            margin-top: auto;
+        }
+    
+        &__likes-button {
+            order: 2;
+            margin-right: 0;       
+        }
+    
+        &__likes-count {
+            order: 1;
+        }
+    }
+}
+
+@media(min-width: $width-dsk) {
+    .photo {
+
+        &--main &__comment {
+            margin: 0 130px;
+        }
+    
+        &--main::before {
+            right: 130px;
+        }
+    }
+}
+
