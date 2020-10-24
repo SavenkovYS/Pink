@@ -1,0 +1,43 @@
+.platform {
+    padding: 35px 20px 45px;
+
+    background-color: #f2f2f2;
+    border: none;
+
+    &__title {
+        float: left;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        margin-bottom: 35px;
+    
+
+        color: $clr-accent-light;
+        font-size: 0.875rem;
+        text-align: center;  
+        line-height: $lh-secondary; 
+        text-transform: uppercase;
+    }
+
+    &__list {
+        clear: both;
+    }
+
+    &__item {
+        margin-bottom: 45px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__label {
+        position: relative;
+
+        padding: 5px 0 5px 70px;
+        
+        font-size: 1.125rem;
+        line-height: $lh-secondary;
+    }
+}

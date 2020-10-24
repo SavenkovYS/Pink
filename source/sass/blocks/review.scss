@@ -1,0 +1,30 @@
+.review {
+    padding: 35px 20px 0;
+
+    border: none;
+
+    &__title {
+        float: left;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        margin-bottom: 15px;
+    
+
+        color: $clr-accent-light;
+        font-size: 0.875rem;
+        text-align: center;  
+        line-height: $lh-secondary; 
+        text-transform: uppercase;
+    }
+
+    &__field {
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+
+        color: $clr-accent-dark;
+        font-size: 1.125rem;
+    }
+}

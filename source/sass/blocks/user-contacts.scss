@@ -1,0 +1,28 @@
+.user-contacts {
+    padding: 35px 20px 40px;
+
+    border: none;
+
+    &__title {
+        display: none;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 25px;
+    }
+
+    &__label {
+        margin-bottom: 10px;
+        padding-left: 22px;
+
+        color: $clr-accent-light;
+        text-transform: uppercase;
+    }
+
+    &__field {
+        width: 100%;
+    }
+}
