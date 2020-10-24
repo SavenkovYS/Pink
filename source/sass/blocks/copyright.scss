@@ -1,0 +1,15 @@
+.copyright {
+    display: flex;
+    align-items: center;
+
+    &__text {
+        margin-right: 15px;
+        padding-bottom: 3px;
+
+        font-weight: $fw-reg;
+    }
+
+    &__link {
+        display: flex;
+    }
+}

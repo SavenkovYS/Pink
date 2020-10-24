@@ -5,6 +5,7 @@
         margin-bottom: 40px;
         padding: 0 20px;
 
+        font-size: 0.875rem;
         text-align: center;
 
         span {
@@ -35,22 +36,23 @@
         border-bottom: 1px solid #dddfe0;
     }
 
-    &__toggles {
+    &__toggles-list {
         display: flex;
         justify-content: center;
 
         margin-bottom: 30px;
     }
 
-    &__toggle {
-        width: 70px;
+    &__toggles-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
         margin-right: 15px;
-
-        background-color: transparent;
-        border: none;
     }
 
-    &__toggle:last-child {
+    &__toggles-item:last-child {
         margin-right: 0;
     }
 
@@ -58,17 +60,17 @@
         fill: $clr-accent-light;
     } 
     
-    &__label--saturate {
+    &__filter--saturate {
         display: none;
     }
 
-    &__label--contrast {
+    &__filter--contrast {
         display: none;
     }
 
     // Стилизация input range
 
-    &__filter {
+    &__filter-range {
         display: block;
         width: 280px;
         margin: 0 auto;
@@ -78,11 +80,11 @@
         outline: none;
     }
     
-    &__filter::-webkit-slider-thumb {
+    &__filter-range::-webkit-slider-thumb {
         -webkit-appearance: none;
     }
     
-    &__filter::-ms-track {
+    &__filter-range::-ms-track {
         width: 100%;
 
         color: transparent;
@@ -92,7 +94,7 @@
         border-color: transparent;
     }
 
-    &__filter::-webkit-slider-thumb {
+    &__filter-range::-webkit-slider-thumb {
         -webkit-appearance: none;
 
         height: 14px;
@@ -105,7 +107,7 @@
         cursor: pointer;
     }
 
-    &__filter::-moz-range-thumb {
+    &__filter-range::-moz-range-thumb {
         height: 10px;
         width: 10px;
         margin-top: -6px;
@@ -116,7 +118,7 @@
         cursor: pointer;
     }
 
-    &__filter::-ms-thumb {
+    &__filter-range::-ms-thumb {
         height: 10px;
         width: 10px;
         margin-top: -1px;
@@ -127,19 +129,19 @@
         cursor: pointer;
     }
 
-    &__filter::-webkit-slider-thumb:active {
+    &__filter-range::-webkit-slider-thumb:active {
         background-color: $clr-accent-light;
     }
 
-    &__filter::-moz-range-thumb:active {
+    &__filter-range::-moz-range-thumb:active {
         background-color: $clr-accent-light;
     }
 
-    &__filter::-ms-thumb:active {
+    &__filter-range::-ms-thumb:active {
         background-color: $clr-accent-light;
     }
 
-    &__filter::-webkit-slider-runnable-track {
+    &__filter-range::-webkit-slider-runnable-track {
         width: 100%;
         height: 2px;
 
@@ -147,7 +149,7 @@
         background-color: $clr-accent-dark;
     }
 
-    &__filter::-moz-range-track {
+    &__filter-range::-moz-range-track {
         width: 100%;
         height: 2px;
 
@@ -155,7 +157,7 @@
         background-color: $clr-accent-dark;
     }
 
-    &__filter::-ms-track {
+    &__filter-range::-ms-track {
         width: 100%;
         height: 1px;
 
@@ -163,7 +165,7 @@
         background-color: $clr-accent-dark;
     }
 
-    &__filter::-ms-fill-lower {
+    &__filter-range::-ms-fill-lower {
         width: 100%;
         height: 1px;
 
@@ -172,4 +174,172 @@
     }
 
     // / Стилизация input range
+
+    &__button-container {
+        padding: 40px 0;
+    }
+
+    &__button {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    &__button--active {
+        margin-bottom: 15px;
+        color: $clr-accent-light;
+
+        border-color: $clr-accent-light;
+    }
+
+    &__button--cancel {
+        color: rgba(40, 54, 69, 0.1);
+
+        border-color: rgba(40, 54, 69, 0.1);
+    }
+}
+
+@media(min-width: $width-tbl) {
+    .user-photo {
+        padding-top: 70px;
+    
+        &__text {
+            margin-bottom: 70px;
+
+            font-size: 1.125rem;
+        }
+    
+        &__form {
+            display: grid;
+            grid-template-areas: 
+                "photo filters"
+                "photo buttons";
+
+            padding: 55px 20px;
+        }
+
+        &__image-container {
+            grid-area: photo;
+        }
+    
+        &__settings {
+            align-items: flex-start;
+    
+            padding: 0;
+            border-bottom: none;
+        }
+    
+        &__toggles-list {
+            display: none;
+        }
+
+        &__filters {
+            width: 100%;
+        }
+
+        &__filter {
+            position: relative;
+
+            display: block;
+            padding: 35px 20px 35px 55px;
+
+            border-bottom: 1px solid #dddfe0;
+        }
+
+        &__filter:first-child {
+            padding-top: 20px;
+        }
+
+        &__filter::before {
+            content: '';
+
+            position: absolute;
+            left: 0;
+
+            width: 30px;
+            height: 30px;
+
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &__filter--crop::before {
+            top: 5px;
+
+            background-image: url(../img/filter-toggle-small-1.svg);
+        }
+
+        &__filter--saturate::before {
+            top: 20px;
+            
+            background-image: url(../img/filter-toggle-small-2.svg);
+        }
+
+        &__filter--contrast::before {
+            top: 20px;
+            
+            background-image: url(../img/filter-toggle-small-3.svg);
+        }
+    
+        &__filter-range {
+            width: 100%;
+        }
+    
+        &__button-container {
+            margin-top: auto;
+            padding: 0;
+        }
+    }
+}
+
+@media(min-width: $width-dsk  ) {
+    .user-photo {
+        padding: 60px 130px 0;
+    
+        &__text {
+            margin-bottom: 60px;
+        }
+    
+        &__form {
+            padding: 55px 80px;
+        }
+
+        &__filter {
+            padding: 35px 20px 35px 90px;
+        }
+
+        &__filter::before {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__filter--crop::before {
+            top: 0;
+
+            background-size: 48px 48px;
+        }
+
+        &__filter--saturate::before {
+            top: 15px;
+            
+            background-size: 48px 48px;
+        }
+
+        &__filter--contrast::before {
+            top: 11px;
+            
+            background-size: 32px 32px;
+        }
+    
+        &__button-container {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        &__button {
+            width: 45%;
+            max-width: none;
+            margin: 0;
+        }
+    }
 }
