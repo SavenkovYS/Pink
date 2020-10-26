@@ -16,7 +16,7 @@
     }
 
     &__title {
-        width: 200px;
+        width: 80%;
         margin: 0 auto;
 
         font-size: var(--fs-h2);
@@ -34,10 +34,6 @@
             padding: 180px 20px 140px;
 
             background-image: url(../img/bg-gallery-tablet.jpg);
-        }
-
-        &__title {
-            width: 400px;
         }
     }
 }

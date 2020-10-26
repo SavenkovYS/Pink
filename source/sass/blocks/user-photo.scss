@@ -56,6 +56,28 @@
         margin-right: 0;
     }
 
+    &__toggle {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__toggle::before,
+    &__toggle::after {
+        display: none;
+    }
+
+    &__toggle svg {
+        opacity: 0.3;
+    }
+
+    &__toggle:hover svg {
+        opacity: 0.5;
+    } 
+
+    &__toggle--active svg {
+        opacity: 1;
+    }
+
     &__toggle--active svg path {
         fill: $clr-accent-light;
     } 
@@ -185,17 +207,8 @@
         margin: 0 auto;
     }
 
-    &__button--active {
+    &__button-post {
         margin-bottom: 15px;
-        color: $clr-accent-light;
-
-        border-color: $clr-accent-light;
-    }
-
-    &__button--cancel {
-        color: rgba(40, 54, 69, 0.1);
-
-        border-color: rgba(40, 54, 69, 0.1);
     }
 }
 

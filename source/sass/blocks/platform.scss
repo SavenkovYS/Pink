@@ -1,6 +1,4 @@
 .platform {
-    padding: 35px 20px 45px;
-
     background-color: #f2f2f2;
     border: none;
 
@@ -40,4 +38,40 @@
         font-size: 1.125rem;
         line-height: $lh-secondary;
     }
+}
+
+@media(min-width: $width-tbl) {
+    .platform {
+        padding: 50px 60px 55px;
+    
+        border: 2px solid $br-clr-primary;
+    
+        &__title {
+            float: none;
+            position: static;
+            left: auto;
+            transform: none;
+    
+            margin-bottom: 0;
+            padding: 0 25px;
+        }
+    
+        &__list {
+            clear: none;
+        }
+    
+        &__item {
+            margin-bottom: 40px;
+        }
+    
+        &__label {
+            padding: 5px 0 5px 60px; 
+        }
+    }  
+}
+
+@media(min-width: $width-dsk) {
+    .platform {
+        padding: 50px 75px 55px; 
+    }  
 }

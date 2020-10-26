@@ -52,6 +52,16 @@
         text-decoration: none;
     }
 
+    &__item-value--mail:hover,
+    &__item-value--mail:focus {
+        color: $clr-accent-dark;
+        text-decoration: underline;
+    }
+
+    &__item-value--mail:active {
+        color: rgba(40, 54, 69, 0.3);
+    }
+
     &__map {
         position: relative;
 

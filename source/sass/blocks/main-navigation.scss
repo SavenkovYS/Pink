@@ -20,7 +20,7 @@
 
     &__button {
         position: absolute;
-        top: 25px;
+        top: 23px;
         right: 20px;
 
         background-color: transparent;
@@ -37,8 +37,8 @@
         content: '';
 
         position: absolute;
-        top: 10px;
-        left: -2px;
+        top: 13px;
+        left: 0;
 
         width: 30px;
         height: 4px;
@@ -63,7 +63,7 @@
         content: '';
 
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 0;
 
         width: 50px;
@@ -76,6 +76,46 @@
 
     &__button--open {
         display: none;
+    }
+
+    // =====Состояния логотипа=====
+
+    &__logo-link[href]:hover &__logo-image path,
+    &__logo-link[href]:focus &__logo-image path{
+        fill: $clr-accent-light;
+    }
+
+    &__logo-link[href]:active &__logo-image path {
+        fill: inherit;
+        opacity: 0.3;
+    }
+
+    // Состояния кнопок открытия/закрытия мобильного меню
+
+    &__button--close:hover::before,
+    &__button--close:hover::after,
+    &__button--close:focus::before,
+    &__button--close:focus::after {
+        background-color: rgba(210, 40, 86, 1);
+    }
+
+    &__button--close:active::before,
+    &__button--close:active::after {
+        background-color: rgba(210, 40, 86, 0.3);
+    }
+
+    &__button--open:hover::before,
+    &__button--open:focus::before {
+        background-color: rgba(210, 40, 86, 1);
+        box-shadow: 0 10px rgba(210, 40, 86, 1),
+                    0 20px rgba(210, 40, 86, 1);
+    }
+
+
+    &__button--open:active::before {
+        background-color: rgba(210, 40, 86, 0.3);
+        box-shadow: 0 10px rgba(210, 40, 86, 0.3),
+                    0 20px rgba(210, 40, 86, 0.3);
     }
 }
 

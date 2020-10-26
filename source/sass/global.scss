@@ -68,35 +68,90 @@ body {
   font-size: var(--fs-btn);
   line-height: $lh-secondary;
   font-weight: $fw-bold;
-  color: $clr-light;
+  color: $clr-accent-light;
   text-decoration: none;
   text-align: center;
 
   background-color: transparent;
-  border: 3px solid #fff;
+  border: 3px solid $clr-accent-light;
+  
   border-radius: 30px;
+}
+
+.button--light {
+  color: $clr-light;
+
+  border: 3px solid $clr-light;
+}
+
+.button--disabled {
+  color: rgba(40, 54, 69, 0.1);
+  
+  border: 3px solid  rgba(40, 54, 69, 0.1);
+  background-color: transparent;
+}
+
+.button--secondary {
+  text-transform: uppercase;
+
+  color: $clr-light;
+
+  background-color: rgba(42, 171, 109, 1);
+  border: none;
+  border-radius: 0;
 }
 
 // Состояния кнопок 
 
 .button:hover,
 .button:focus {
-  background-color: $clr-bg-hvr;
-}
+  color: $clr-light;
 
-.button:focus {
-  outline: 5px solid $clr-accent-dark;
-  outline-offset: 5px;
+  background-color: $clr-accent-light;
 }
 
 .button:active {
-  background-color: $clr-bg-act;
-
-  color: $clr-light-act;
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.button:disabled {
-  background-color: $clr-bg-disabled;
+.button--light:hover,
+.button--light:focus {
+  color: $clr-accent-light;
+
+  background-color: $clr-light;
+}
+
+.button--light:active {
+  color: rgba(210, 40, 86, 0.3);
+}
+
+.button--disabled:hover,
+.button--disabled:focus {
+  color: rgba(40, 54, 69, 0.3);
+  
+  border: 3px solid rgba(40, 54, 69, 0.3);
+  background-color: transparent;
+} 
+
+.button--disabled:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: rgba(40, 54, 69, 0.3); 
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: rgba(28, 155, 94, 1);
+}
+
+.button--secondary:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--secondary:disabled {
+  color: #ffffff;
+
+  background-color: #e5e5e5;
 }
 
 // =========Поля формы==========
@@ -106,7 +161,7 @@ body {
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
-  padding: 14px 20px;
+  padding: 18px 20px;
 
   font-size: 1.125rem;
   color: $clr-accent-dark;

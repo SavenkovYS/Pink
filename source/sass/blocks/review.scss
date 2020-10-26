@@ -1,6 +1,4 @@
 .review {
-    padding: 35px 20px 0;
-
     border: none;
 
     &__title {
@@ -26,5 +24,24 @@
 
         color: $clr-accent-dark;
         font-size: 1.125rem;
+        border: 2px solid $br-clr-primary;
     }
+}
+
+@media(min-width: $width-tbl) {
+    .review {
+        padding: 40px 60px 55px;
+    
+        border: 2px solid $br-clr-primary;
+    
+        &__title {
+            float: none;
+            position: static;
+            left: auto;
+            transform: none;
+    
+            margin-bottom: 0;
+            padding: 0 35px;
+        }
+    } 
 }

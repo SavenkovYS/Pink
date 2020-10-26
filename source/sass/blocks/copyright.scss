@@ -12,4 +12,13 @@
     &__link {
         display: flex;
     }
+
+    &__link:hover &__logo path,
+    &__link:focus &__logo path {
+        fill: rgba(40, 54, 69, 1);
+    }
+
+    &__link:active &__logo path {
+        fill: rgba(40, 54, 69, 0.3);
+    }
 }

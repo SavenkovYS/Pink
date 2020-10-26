@@ -18,6 +18,15 @@
 
         text-decoration: none;
     }
+
+    &__link[href]:hover,
+    &__link[href]:focus {
+        color: rgba(210, 40, 86, 1);
+    }
+
+    &__link[href]:active {
+        color: rgba(210, 40, 86, 0.3);
+    }
 }
 
 @media(min-width: $width-dsk) {
@@ -33,7 +42,11 @@
         &__link {
             padding: 0;
 
-            text-transform: none;
+            text-transform: none; 
+        }
+
+        &__link--active {
+            border-bottom: 2px solid $clr-light;
         }
     }
 }

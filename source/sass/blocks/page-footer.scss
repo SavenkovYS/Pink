@@ -18,6 +18,15 @@
         display: none;
     }
 
+    &__logo-link:hover &__logo path,
+    &__logo-link:focus &__logo path {
+        fill: $clr-accent-light;
+    }
+
+    &__logo-link:active &__logo path {
+        opacity: 0.3;
+    }
+
     &__social {
         margin-bottom: 40px;
     }

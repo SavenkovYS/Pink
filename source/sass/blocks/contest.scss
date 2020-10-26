@@ -2,7 +2,6 @@
     padding-top: 50px;
 
     &__description {
-        margin-bottom: 40px;
         padding: 0 20px;
 
         text-align: center;
@@ -10,6 +9,19 @@
         span {
             display: none;
         }
+    }
+
+    &__item {
+        padding: 40px 20px;
+    }
+
+    &__item:last-child {
+        padding-bottom: 0;
+    }
+
+    &__item--achievements,
+    &__item--platform {
+        background-color: #f2f2f2;
     }
 
     &__bottom {
@@ -22,15 +34,9 @@
     }
 
     &__submit {
-        text-transform: uppercase;
-
         width: 100%;
         max-width: 340px;
         margin-bottom: 40px;
-
-        background-color: rgba(42, 171, 109, 1);
-        border: none;
-        border-radius: 0;
     }
 
     &__legend {
@@ -45,4 +51,117 @@
     &__legend-full {
         display: none;
     }
+}
+
+@media(min-width: $width-tbl) {
+    .contest {
+        padding-top: 100px;
+    
+        &__description {
+            margin-bottom: 70px;
+
+            font-size: 1.125rem;
+    
+            span {
+                display: inline-block;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__item {
+            margin-bottom: 60px;
+            padding: 0 20px;
+        }
+
+        &__item:last-child {
+            margin-bottom: 0;
+        }
+
+        &__item--achievements,
+        &__item--platform {
+            background-color: transparent;
+        }
+
+        &__item--fullname {order: 1;}    
+
+        &__item--achievements {order: 4;}
+
+        &__item--contacts {order: 3;}
+
+        &__item--platform {order: 2;}
+
+        &__item--review {order: 5;}
+    
+        &__bottom {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    
+            padding: 70px 20px 50px;
+        }
+    
+        &__submit {
+            width: 45%;
+            max-width: 300px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media(min-width: $width-dsk) {
+    .contest {
+    
+        &__description {
+            margin-bottom: 80px;
+        }
+
+        &__list {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            padding: 0 130px; 
+        }
+
+        &__item {
+            padding: 0;
+        }
+
+        &__item--fullname {
+            width: 50%;
+            padding-right: 35px;
+        }    
+
+        &__item--achievements {
+            width: 100%;
+        }
+
+        &__item--contacts {
+            width: 100%;
+        }
+
+        &__item--platform {
+            width: 50%;
+            padding-left: 35px; 
+        }
+
+        &__item--review {
+            width: 100%;
+        }
+    
+        &__bottom {
+            padding: 70px 130px 0;
+        }
+    
+        &__submit {
+            width: 45%;
+        }
+
+        &__legend-full {
+            display: inline-block;
+        }
+    }         
 }
