@@ -11,8 +11,8 @@
 
     &__list {
         width: 280%;
-        transform: translateX(-32%);
         margin-bottom: 40px;
+        transform: translateX(-32%);
 
         text-transform: uppercase;
 
@@ -129,6 +129,24 @@
     }
 }
 
+// Позицонирование таблицы при переключении слайдера
+
+@media(max-width: $width-tbl - 1) {
+    .catalogue {
+        &__list--center {
+            transform: translateX(-32%);
+        }
+
+        &__list--left {
+            transform: translateX(1%);
+        }
+
+        &__list--right {
+            transform: translateX(-65%);
+        }
+    }
+}
+
 @media(min-width: $width-tbl) {
     .catalogue {
         padding: 90px 20px 65px; 
@@ -136,6 +154,7 @@
         &__list {
             width: 100%;
             margin-bottom: 0;
+
             transform: unset;
         }
 
@@ -178,6 +197,8 @@
 
         &__value {
             padding: 15px;
+
+            background-color: #fff;
         }
 
         &__value--title {
@@ -210,6 +231,11 @@
 @media(min-width: $width-dsk) {
     .catalogue {
         padding: 150px 130px 100px;
+
+        &__list {
+            max-width: $max-width-dsk;
+            margin: 0 auto;
+        }
 
         &__title {
             font-size: 1.125rem;

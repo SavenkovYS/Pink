@@ -10,6 +10,7 @@
 
         font-size: var(--fs-h2);
         line-height: $lh-secondary;
+        font-weight: $fw-light;
     }
 
     &__slogan--question {
@@ -87,7 +88,7 @@
     
         &__inner-container {
             min-height: 485px;
-            max-width: 750px;
+            max-width: 700px;
             margin: 0 auto;     
             padding-bottom: 40px;        
         }
@@ -127,11 +128,15 @@
         &__slogan--answer {
             margin-bottom: 70px;
         }
+
+        &__container {
+            padding: 0 130px 70px;
+        }
     
         &__inner-container {
             min-height: auto;
-            max-width: none;    
-            padding: 0 130px 70px;        
+            max-width: $max-width-dsk;    
+            padding: 0;        
         }
       
         &__inner-container::before {

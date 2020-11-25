@@ -143,19 +143,24 @@
 @media(min-width: $width-dsk) {
     .contacts {
         padding-top: 70px;
+
+        &__wrapper {
+            max-width: $max-width-dsk;
+            margin: 0 auto;
+        }
     
         &__title {
             margin-bottom: 55px;
         }
     
         &__list {
-            justify-content: space-around;
+            justify-content: space-between;
 
             margin-bottom: 15px;
         }
     
         &__item {
-            width: calc(100% / 3);
+            width: auto;
             margin-bottom: 0;
         }
 

@@ -25,6 +25,7 @@
 
         background-color: transparent;
         border: none;
+        cursor: pointer;
     }
 
     &__button--close {
@@ -170,12 +171,17 @@
 
 @media(min-width: $width-dsk) {
     .main-navigation {
-        display: flex;
-        justify-content: space-between;
-
         padding: 25px 130px 40px;
 
         background-color: rgba(0, 0, 0, 0.3);
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+
+            max-width: $max-width-dsk;
+            margin: 0 auto;
+        }
 
         &__top {
             padding: 0;

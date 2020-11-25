@@ -8,7 +8,7 @@
     background-image: url(../img/hand-mobile.png),
                       url(../img/bg-back-mobile@1x.jpg);
     background-repeat: no-repeat;
-    background-position: top 150px left 20%, top center;
+    background-position: top 150px left calc(50% - 38px), top center;
     background-size: auto 316px, auto;
     
 
@@ -28,6 +28,10 @@
         min-width: 280px;
         max-width: 340px;
         margin: 0 auto;
+    }
+
+    &__text {
+        font-weight: $fw-light;
     }
 
     &__button {     
@@ -70,10 +74,10 @@
     .download {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
 
         min-height: 729px;
-        padding-top: 210px;
-        padding-bottom: 110px;
+        padding: 210px 20px 110px;
 
         background-image: url(../img/hand-tablet.png),
                           url(../img/bg-back-tablet@1x.jpg);
@@ -81,8 +85,16 @@
         background-size:  auto, auto 100%;
         
 
+        &__wrapper {
+            max-width: 900px;
+            width: 100%;
+            
+            margin: 0 auto;
+        }
+
         &__content {
-            padding: 0 20px;
+            width: 300px;
+            padding: 0;
             margin-right: auto;
         }
 
@@ -95,6 +107,7 @@
 
             font-size: var(--fs-h2);
             line-height: $lh-secondary;
+            font-weight: $fw-light;
         }
 
         &__button,
@@ -122,17 +135,19 @@
 @media(min-width: $width-dsk) {
     .download {
         min-height: 853px;
-        padding-top: 220px;
-        padding-bottom: 120px;
-
+        padding: 220px 130px 120px;
+    
         background-image: url(../img/hand-desktop.png),
                           url(../img/bg-back-desktop@1x.jpg);
         background-position: bottom center, top center;
         background-size:  auto, auto 100%;
         
+        &__wrapper {
+            max-width: $max-width-dsk;
+        }
 
         &__content {
-            padding: 0 130px;
+           width: 320px;
         }
 
         &__slogan {

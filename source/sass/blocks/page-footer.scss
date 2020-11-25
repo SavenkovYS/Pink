@@ -1,10 +1,14 @@
 .page-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     padding: 40px 20px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+    }
 
     &--index {
         display: none;
@@ -18,12 +22,12 @@
         display: none;
     }
 
-    &__logo-link:hover &__logo path,
-    &__logo-link:focus &__logo path {
+    &__logo-link[href]:hover &__logo path,
+    &__logo-link[href]:focus &__logo path {
         fill: $clr-accent-light;
     }
 
-    &__logo-link:active &__logo path {
+    &__logo-link[href]:active &__logo path {
         opacity: 0.3;
     }
 
@@ -33,11 +37,13 @@
 }
 
 @media(min-width: $width-tbl) {
-    .page-footer {
-        flex-direction: row;
-        justify-content: space-between;
-    
+    .page-footer {   
         padding: 35px 20px 40px;
+
+        &__wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     
         &--index {
             display: flex;
@@ -57,6 +63,11 @@
 @media(min-width: $width-dsk) {
     .page-footer {    
         padding: 70px 130px 75px;
+
+        &__wrapper {
+            max-width: $max-width-dsk;
+            margin:  0 auto;
+        }
     
         &__logo-link {
             padding-bottom: 15px;

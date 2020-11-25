@@ -5,15 +5,15 @@
 @media(min-width: $width-tbl) {
     .research {
         display: block;
+        padding: 60px 20px 90px; 
 
         &__container {
-            max-width: 750px;
-            margin: 0 auto;
-            padding: 60px 20px 100px; 
+            max-width: 700px;
+            margin: 0 auto; 
 
             background-image: url(../img/research-tablet.png);
             background-repeat: no-repeat;
-            background-position: top 60px left 5%;
+            background-position: top left 5%;
         }
 
         &__content {
@@ -46,13 +46,13 @@
 @media(min-width: $width-dsk) {
     .research {
         background-color: #f2f2f2;
+        padding: 0 130px 65px;
     
         &__container {
-            max-width: 1300px;
-            padding: 0 130px 65px; 
-
+            max-width: $max-width-dsk;
+             
             background-image: url(../img/research-desktop.png);
-            background-position: top left 130px;
+            background-position: top left;
         }
 
         &__content {
