@@ -73,8 +73,8 @@ body {
   text-align: center;
 
   background-color: transparent;
-  border: 3px solid $clr-accent-light;
-  
+  border: 3px solid $clr-accent-light;  
+  cursor: pointer;
   border-radius: 30px;
 }
 
@@ -158,9 +158,7 @@ body {
 
 // Текстовые поля
 
-input[type="text"],
-input[type="tel"],
-input[type="email"] {
+.text-input {
   padding: 18px 20px;
 
   font-size: 1.125rem;
@@ -172,19 +170,13 @@ input[type="email"] {
 
 // Состояния текстовых полей
 
-input[type="text"]:hover,
-input[type="tel"]:hover,
-input[type="email"]:hover {
+.text-input:hover {
   background-color: #e5e5e5;
   border: 2px solid #e5e5e5;
 }
 
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="email"]:focus,
-input[type="text"]:active,
-input[type="tel"]:active,
-input[type="email"]:active {
+.text-input:focus,
+.text-input:active {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   outline: none;
@@ -192,7 +184,7 @@ input[type="email"]:active {
 
 // Чекбоксы
 
-input[type="checkbox"] + label::before {
+.checkbox + label::before {
   content: '';
 
   position: absolute;
@@ -207,7 +199,7 @@ input[type="checkbox"] + label::before {
   cursor: pointer;
 }
 
-input:checked + label::after {
+.checkbox:checked + label::after {
   content: '';
 
   position: absolute;
@@ -225,18 +217,18 @@ input:checked + label::after {
 
 // Состояния чекбоксов
 
-input[type="checkbox"]:hover + label::before {
+.checkbox:hover + label::before {
   border: 2px solid #283645;
 }
 
-input[type="checkbox"]:focus + label::before,
-input[type="checkbox"]:active + label::before {
+.checkbox:focus + label::before,
+.checkbox:active + label::before {
   border: 2px solid #d22856;
 }
 
 // Радиокнопки
 
-input[type="radio"] + label::before {
+.radio-button + label::before {
   content: "";
 
   position: absolute;
@@ -252,7 +244,7 @@ input[type="radio"] + label::before {
   cursor: pointer;
 }
 
-input[type="radio"]:checked + label::after {
+.radio-button:checked + label::after {
   content: "";
 
   position: absolute;
@@ -268,12 +260,12 @@ input[type="radio"]:checked + label::after {
 
 // Состояния радиокнопок
 
-input[type="radio"]:hover + label::before {
+.radio-button:hover + label::before {
   border: 2px solid $clr-accent-dark;
 }
 
-input[type="radio"]:focus + label::before,
-input[type="radio"]:active + label::before {
+.radio-button:focus + label::before,
+.radio-button:active + label::before {
   border: 2px solid $clr-accent-light;
 }
 

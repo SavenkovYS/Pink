@@ -308,6 +308,11 @@
 @media(min-width: $width-dsk  ) {
     .user-photo {
         padding: 60px 130px 0;
+
+        &__wrapper {
+            max-width: $max-width-dsk;
+            margin: 0 auto;
+        }
     
         &__text {
             margin-bottom: 60px;

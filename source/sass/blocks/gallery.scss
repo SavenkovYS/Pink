@@ -6,19 +6,22 @@
         padding: 0 20px;
 
         text-align: center;
+        line-height: 1.875rem;
     }
 
     &__item {
         margin-bottom: 20px;
     }
 
+    &__item--main {
+        width: 100%;
+    }
+
     &__item:last-child {
         margin-bottom: 0;
     }
 
-    &__item--main img{
-        width: 100%;
-    }
+    
 }
 
 @media(min-width: $width-tbl) {
@@ -57,11 +60,19 @@
         &__item figure {
             display: flex;
             flex-direction: column;
+            align-items: center;
             height: 100%;
         }
 
         &__item figcaption {
             height: 100%;
+        }
+
+        &__item--main img {
+            height: 400px;
+
+            object-fit: cover;
+            object-position: center;
         }
     }    
 }
@@ -70,11 +81,17 @@
     .gallery {
 
         &__list {
-            justify-content: space-between;
+            justify-content: center;
         }
     
         &__item {
             width: calc((100% - 260px - 40px) / 3);
+            max-width: calc((1200px - 40px) / 3);
+        }
+
+        &__item:nth-child(3n + 3) {
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         &__item:nth-child(3n + 4) {
@@ -91,14 +108,12 @@
         }
 
         &__item--main {
+            max-width: none;
             width: 100%;
         }
 
         &__item--main img {
             height: 500px;
-
-            object-fit: cover;
-            object-position: center;
         }
     }    
 }

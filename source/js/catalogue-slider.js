@@ -1,3 +1,5 @@
+'use strict'
+
 {
     const catalogueSection = document.querySelector('.catalogue');
     const catalogueTable = catalogueSection.querySelector('.catalogue__list');

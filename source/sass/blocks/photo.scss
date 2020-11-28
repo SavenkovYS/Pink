@@ -91,11 +91,16 @@
         &--main::before {
             top: 60px;
         }
+
+        &__container {
+            width: 100%;
+        }
     
         &__comment {
             display: flex;
             flex-direction: column;
 
+            width: 100%;
             padding: 25px;
         }
 
@@ -145,7 +150,9 @@
 @media(min-width: $width-dsk) {
     .photo {
 
+
         &--main &__comment {
+            max-width: $max-width-dsk;
             margin: 0 130px;
         }
     

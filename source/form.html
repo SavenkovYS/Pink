@@ -10,6 +10,7 @@
 <body>
     <header class="page-header">
         <nav class="main-navigation main-navigation--opened">
+          <div class="main-navigation__wrapper">
 
             <div class="main-navigation__top">
 
@@ -83,6 +84,7 @@
                     <a class="site-list__link" href="#">HTML Academy</a>
                 </li>
             </ul>
+          </div>
         </nav>
     </header>
     <main class="page-main page-main--form">
@@ -90,124 +92,127 @@
           <h1 class="page-main__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
         </div>
         <section class="contest">
-          <h2 class="visually-hidden">Подать заявку на участие в конкурсе</h2>
-          <p class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-            <span>Пожалуйста, заполните форму ниже:</span>
-          </p>
-          <form class="contest__form" action="https://echo.htmlacademy.ru" method="get">
-            <ul class="contest__list">
-              <li class="contest__item contest__item--fullname">
-                <fieldset class="contest__fullname fullname">
-                  <ul class="fullname__list">
-                    <li class="fullname__item">
-                      <label class="fullname__label" for="surname-field">Фамилия:</label>
-                      <input class="fullname__field fullname__field--surname" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *">
-                    </li>
-                    <li class="fullname__item">
-                      <label class="fullname__label" for="name-field">Имя:</label>
-                      <input class="fullname__field fullname__field--name" type="text" name="name" id="name-field" placeholder="Введите ваше имя *">
-                    </li>
-                    <li class="fullname__item">
-                      <label class="fullname__label" for="middle-name-field">Отчество:</label>
-                      <input class="fullname__field fullname__field--middle-name" type="text" name="middle-name" id="middle-name-field" placeholder="Ну и отчество тоже">
-                    </li>
-                  </ul>
-                </fieldset>
-              </li>
-              <li class="contest__item contest__item--achievements">
-                <fieldset class="contest__achievements achievements">
-                  <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
-                  <div class="achievements__columns-wrapper">
-                    <div class="achievements__column">
-                      <div class="achievements__column-container">
-                        <p class="achievements__item">
-                          <input class="achievements__selfie visually-hidden" type="checkbox" name="selfie" id="selfie-field" checked="">
-                          <label class="achievements__label" for="selfie-field">Сделал селфи с акулой</label>
-                        </p>
-                        <p class="achievements__item">
-                          <input class="achievements__sunburn visually-hidden" type="checkbox" name="sunburn" id="sunburn-field" checked="">
-                          <label class="achievements__label" for="sunburn-field">Обгорел на пляже</label>
-                        </p>
+          <div class="contest__wrapper">
+            <h2 class="visually-hidden">Подать заявку на участие в конкурсе</h2>
+            <p class="contest__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+              <span>Пожалуйста, заполните форму ниже:</span>
+            </p>
+            <form class="contest__form" action="https://echo.htmlacademy.ru" method="get">
+              <ul class="contest__list">
+                <li class="contest__item contest__item--fullname">
+                  <fieldset class="contest__fullname fullname">
+                    <ul class="fullname__list">
+                      <li class="fullname__item">
+                        <label class="fullname__label" for="surname-field">Фамилия:</label>
+                        <input class="fullname__field fullname__field--surname text-input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию *">
+                      </li>
+                      <li class="fullname__item">
+                        <label class="fullname__label" for="name-field">Имя:</label>
+                        <input class="fullname__field fullname__field--name text-input" type="text" name="name" id="name-field" placeholder="Введите ваше имя *">
+                      </li>
+                      <li class="fullname__item">
+                        <label class="fullname__label" for="middle-name-field">Отчество:</label>
+                        <input class="fullname__field fullname__field--middle-name text-input" type="text" name="middle-name" id="middle-name-field" placeholder="Ну и отчество тоже">
+                      </li>
+                    </ul>
+                  </fieldset>
+                </li>
+                <li class="contest__item contest__item--achievements">
+                  <fieldset class="contest__achievements achievements">
+                    <legend class="achievements__title">Ваши безбашенные достижения в путешествии</legend>
+                    <div class="achievements__columns-wrapper">
+                      <div class="achievements__column">
+                        <div class="achievements__column-container">
+                          <p class="achievements__item">
+                            <input class="achievements__selfie visually-hidden checkbox" type="checkbox" name="selfie" id="selfie-field" checked="">
+                            <label class="achievements__label" for="selfie-field">Сделал селфи с акулой</label>
+                          </p>
+                          <p class="achievements__item">
+                            <input class="achievements__sunburn visually-hidden checkbox" type="checkbox" name="sunburn" id="sunburn-field" checked="">
+                            <label class="achievements__label" for="sunburn-field">Обгорел на пляже</label>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="achievements__column">
+                        <div class="achievements__column-container">
+                          <p class="achievements__item">
+                            <input class="achievements__norris visually-hidden checkbox" type="checkbox" name="norris" id="norris-field">
+                            <label class="achievements__label" for="norris-field">Видел Чака Норриса</label>
+                          </p>
+                          <p class="achievements__item">
+                            <input class="achievements__souvenirs visually-hidden checkbox" type="checkbox" name="souvenirs" id="souvenirs-field">
+                            <label class="achievements__label" for="souvenirs-field">Накупил сувениров</label>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="achievements__column">
+                        <div class="achievements__column-container">
+                          <p class="achievements__item">
+                            <input class="achievements__tower visually-hidden checkbox" type="checkbox" name="tower" id="tower-field" checked="">
+                            <label class="achievements__label" for="tower-field">Удержал башню</label>
+                          </p>
+                          <p class="achievements__item">
+                            <input class="achievements__hotel visually-hidden checkbox" type="checkbox" name="hotel" id="hotel-field">
+                            <label class="achievements__label" for="hotel-field">Разгромил отель</label>
+                          </p>
+                        </div>
                       </div>
                     </div>
-                    <div class="achievements__column">
-                      <div class="achievements__column-container">
-                        <p class="achievements__item">
-                          <input class="achievements__norris visually-hidden" type="checkbox" name="norris" id="norris-field">
-                          <label class="achievements__label" for="norris-field">Видел Чака Норриса</label>
-                        </p>
-                        <p class="achievements__item">
-                          <input class="achievements__souvenirs visually-hidden" type="checkbox" name="souvenirs" id="souvenirs-field">
-                          <label class="achievements__label" for="souvenirs-field">Накупил сувениров</label>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="achievements__column">
-                      <div class="achievements__column-container">
-                        <p class="achievements__item">
-                          <input class="achievements__tower visually-hidden" type="checkbox" name="tower" id="tower-field" checked="">
-                          <label class="achievements__label" for="tower-field">Удержал башню</label>
-                        </p>
-                        <p class="achievements__item">
-                          <input class="achievements__hotel visually-hidden" type="checkbox" name="hotel" id="hotel-field">
-                          <label class="achievements__label" for="hotel-field">Разгромил отель</label>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </li>
-              <li class="contest__item contest__item--contacts">
-                <fieldset class="contest__contacts user-contacts">
-                  <legend class="user-contacts__title">Контактная информация</legend>
-                  <ul class="user-contacts__list">
-                    <li class="user-contacts__item user-contacts__item--tel">
-                      <label class="user-contacts__label" for="tel-field">Номер телефона</label>
-                      <input class="user-contacts__field user-contacts__field--tel" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
-                    </li>
-                    <li class="user-contacts__item user-contacts__item--email">
-                      <label class="user-contacts__label" for="email-field">Адрес почты</label>
-                      <input class="user-contacts__field user-contacts__field--email" type="email" name="email" id="email-field" placeholder="Введите почту *">
-                    </li>
-                  </ul>
-                </fieldset>
-              </li>
-              <li class="contest__item contest__item--platform">
-                <fieldset class="contest__platform platform">
-                  <legend class="platform__title">С каким приложением путешествовали?</legend>
-                  <ul class="platform__list">
-                      <li class="platform__item">
-                          <input class="platform__ios visually-hidden" type="radio" name="platform" value="ios" id="ios-field" checked="">
-                          <label class="platform__label" for="ios-field">Pink для iOS</label>
+                  </fieldset>
+                </li>
+                <li class="contest__item contest__item--contacts">
+                  <fieldset class="contest__contacts user-contacts">
+                    <legend class="user-contacts__title">Контактная информация</legend>
+                    <ul class="user-contacts__list">
+                      <li class="user-contacts__item user-contacts__item--tel">
+                        <label class="user-contacts__label" for="tel-field">Номер телефона</label>
+                        <input class="user-contacts__field user-contacts__field--tel text-input" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
                       </li>
-                      <li class="platform__item">
-                          <input class="platform__android visually-hidden" type="radio" name="platform" value="android" id="android-field">
-                          <label class="platform__label" for="android-field">Pink на Android</label>
+                      <li class="user-contacts__item user-contacts__item--email">
+                        <label class="user-contacts__label" for="email-field">Адрес почты</label>
+                        <input class="user-contacts__field user-contacts__field--email text-input" type="email" name="email" id="email-field" placeholder="Введите почту *">
                       </li>
-                      <li class="platform__item">
-                          <input class="platform__windows visually-hidden" type="radio" name="platform" value="windows" id="windows-field">
-                          <label class="platform__label" for="windows-field">Windows Phone</label>
-                      </li>
-                  </ul>
-                </fieldset>
-              </li>
-              <li class="contest__item contest__item--review">
-                <fieldset class="contest__review review">
-                  <legend class="review__title">Опишите свои эмоции</legend>
-                  <textarea class="review__field" name="review__field" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-                </fieldset>
-              </li>
-            </ul>
-            <div class="contest__bottom">
-              <button class="contest__submit button button--secondary" type="submit">Отправить форму</button>
-              <small class="contest__legend"><span class="contest__legend-star">*</span> — обязательные <span class="contest__legend-full"> для заполнения</span> поля</small>
-            </div>
-           </form>
+                    </ul>
+                  </fieldset>
+                </li>
+                <li class="contest__item contest__item--platform">
+                  <fieldset class="contest__platform platform">
+                    <legend class="platform__title">С каким приложением путешествовали?</legend>
+                    <ul class="platform__list">
+                        <li class="platform__item">
+                            <input class="platform__ios visually-hidden radio-button" type="radio" name="platform" value="ios" id="ios-field" checked="">
+                            <label class="platform__label" for="ios-field">Pink для iOS</label>
+                        </li>
+                        <li class="platform__item">
+                            <input class="platform__android visually-hidden radio-button" type="radio" name="platform" value="android" id="android-field">
+                            <label class="platform__label" for="android-field">Pink на Android</label>
+                        </li>
+                        <li class="platform__item">
+                            <input class="platform__windows visually-hidden radio-button" type="radio" name="platform" value="windows" id="windows-field">
+                            <label class="platform__label" for="windows-field">Windows Phone</label>
+                        </li>
+                    </ul>
+                  </fieldset>
+                </li>
+                <li class="contest__item contest__item--review">
+                  <fieldset class="contest__review review">
+                    <legend class="review__title">Опишите свои эмоции</legend>
+                    <textarea class="review__field" name="review__field" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                  </fieldset>
+                </li>
+              </ul>
+              <div class="contest__bottom">
+                <button class="contest__submit button button--secondary" type="submit">Отправить форму</button>
+                <small class="contest__legend"><span class="contest__legend-star">*</span> — обязательные <span class="contest__legend-full"> для заполнения</span> поля</small>
+              </div>
+            </form>
+          </div>
         </section>
 
     <!-- Футер -->
 
     <footer class="page-footer page-footer">
+      <div class="page-footer__wrapper">
         <a href="index.html" class="page-footer__logo-link">
             <svg class="page-footer__logo page-footer__logo--mobile" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="146.3px" height="40.375px" viewBox="0 0 146.3 40.375" enable-background="new 0 0 146.3 40.375" xml:space="preserve">
               <g>
@@ -273,6 +278,7 @@
                 </svg>
             </a>
         </div>
+      </div>
     </footer>
     <script src="js/main-nav.js"></script>
 </body>

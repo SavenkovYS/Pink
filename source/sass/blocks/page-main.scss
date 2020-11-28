@@ -41,11 +41,16 @@
 @media(min-width: $width-dsk) {
     .page-main {
 
-        &__introduction {
+        &__introduction {   
             min-height: 400px;
             padding: 170px 130px 105px;
 
             background-image: url(../img/bg-gallery-desktop.jpg);
+        }
+
+        &__description {
+            max-width: $max-width-dsk;
+            margin: 0 auto;
         }
     }
 }

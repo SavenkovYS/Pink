@@ -46,8 +46,6 @@
 
 @media(min-width: $width-dsk) {
     .fullname {
-        display: flex;
-        flex-direction: column;
         height: 100%;
 
         &__list {
