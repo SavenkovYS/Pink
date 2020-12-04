@@ -10,6 +10,10 @@
         border-bottom: 1px solid $clr-dark;
     }
 
+    &__logo-image path {
+        transition: fill 0.1s ease-in;
+    }
+
     &__logo-image--tablet {
         display: none;
     }
@@ -25,7 +29,13 @@
 
         background-color: transparent;
         border: none;
-        cursor: pointer;
+        cursor: pointer;   
+    }
+
+    &__button::before,
+    &__button::after {
+        transition: background-color 0.2s ease-in-out, 
+                    box-shadow 0.2s ease-in-out;
     }
 
     &__button--close {
@@ -79,7 +89,7 @@
         display: none;
     }
 
-    // =====Состояния логотипа=====
+    // ===== Состояния логотипа =====
 
     &__logo-link[href]:hover &__logo-image path,
     &__logo-link[href]:focus &__logo-image path{

@@ -45,7 +45,9 @@
 
         &__item--active {
             display: flex;
-            flex-direction: column;        
+            flex-direction: column;
+            
+            min-height: 180px;
         }
 
         &__auther {

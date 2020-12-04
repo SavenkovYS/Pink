@@ -50,6 +50,7 @@
 
     &__item-value--mail {
         text-decoration: none;
+        transition: color 0.1s ease-in;
     }
 
     &__item-value--mail:hover,

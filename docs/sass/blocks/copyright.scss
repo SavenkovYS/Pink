@@ -13,6 +13,10 @@
         display: flex;
     }
 
+    &__logo path {
+        transition: fill 0.1s ease-in;
+    }
+
     &__link:hover &__logo path,
     &__link:focus &__logo path {
         fill: rgba(40, 54, 69, 1);

@@ -18,6 +18,10 @@
         margin-bottom: 40px;
     }
 
+    &__logo path {
+        transition: fill 0.1s ease-in;
+    }
+
     &__logo--desktop {
         display: none;
     }
