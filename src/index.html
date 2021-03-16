@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">   
+    <link href="css/style.min.css" rel="stylesheet">
+    
+    <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font">
+    <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font">
+
     <title>Мобильное приложение Pink</title>
 </head>
 <body>
     <header class="page-header">
-        <nav class="main-navigation main-navigation--opened">
+        <nav class="main-navigation">
             <div class="main-navigation__wrapper">
                 <div class="main-navigation__top">
 
@@ -299,14 +304,17 @@
                     </li>
                 </ul>
             </div>
-            <p class="contacts__map">
-                <iframe class="contacts__interactive-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560067733819!5m2!1sru!2sru" width="320" height="200" style="border:0" allowfullscreen=""></iframe>
+
+            <!-- Карта -->
+
+            <div class="contacts__map">
+                <div class="contacts__interactive-map" id="map"></div>
                 <picture>
                     <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg">
                     <source media="(min-width: 660px)" srcset="img/map-tablet.jpg">
                     <img class="contacts__map-image" src="img/map-mobile.jpg" width="320" height="200" alt="ул. Большая Конюшенная, 19/8">
                 </picture>
-            </p>
+            </div>
         </section>
     </main>
 
@@ -384,5 +392,10 @@
     <script src="js/catalogue-slider.js"></script>
     <script src="js/main-nav.js"></script>
     <script src="js/comments-toggler.js"></script>
+    <script 
+          src="https://api-maps.yandex.ru/2.1/?apikey=e3eb1e93-9069-43ca-abb3-02206a29090a&lang=ru_RU" 
+          type="text/javascript">
+    </script>
+    <script src="js/map.js"></script>
 </body>
 </html>
